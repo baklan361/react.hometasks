@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ishop</title>
+    <link rel="stylesheet" href="shop.css" />
+  </head>
+  <body>
+    <script src="https://unpkg.com/react@15/dist/react.js"></script>
+    <script src="https://unpkg.com/react-dom@15/dist/react-dom.js"></script>
+    <script src="ishop.js"></script>
+    <script src="shopHeader.js"></script>
+    <script src="shopContent.js"></script>
+    <div id="container"></div>
+    <script>
+      let items = [
+        { name: "product1", price: 10, quantity: 8765, url: "www" },
+        { name: "product2", price: 1010, quantity: 44543, url: "www" },
+        { name: "product3", price: 1001, quantity: 2132, url: "www" },
+        { name: "product4", price: 1010, quantity: 1233, url: "www" },
+        { name: "product5", price: 10110, quantity: 523, url: "www" },
+        { name: "product6", price: 111, quantity: 2311, url: "www" },
+        { name: "product7", price: 143230, quantity: 312, url: "www" },
+        { name: "product8", price: 113213, quantity: 23213, url: "www" },
+        { name: "product9", price: 1213123, quantity: 111, url: "www" },
+        { name: "product10", price: 10123, quantity: 1, url: "www" },
+      ];
+      let tableHeaders = ["Name", "Price", "URL", "Quantity", "Control"];
+      ReactDOM.render(
+        React.createElement(ishop, { goods: items, headers: tableHeaders }),
+        document.getElementById("container")
+      );
+    </script>
+  </body>
+</html>
